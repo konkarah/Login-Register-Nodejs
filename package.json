@@ -4,7 +4,7 @@
   "description": "Simple Login/Register app in nodejs with mysql",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [
     "nodejs",
