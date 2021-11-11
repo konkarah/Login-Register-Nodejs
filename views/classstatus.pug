@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+    for item in items
+        .wrap   
+            p 
+                tr.odd(role='row')
+                        | LECTURE AT:
+                        td #{item.lstart}
+                        br
+                        | TO: 
+                        td #{item.lend}   

@@ -1,0 +1,44 @@
+form(action="/message" method="post")
+                p
+
+                    |          MESSAGE: 
+                    br
+                    input(type='text', value="" , name="message" required)
+                    br 
+                    | Select group 
+                    br
+                    select(name="group" id="group" required)
+                        option(value="bcs") Bachelor of computer science  
+                        option(value="bit") Bachelor of Information technology  
+                        option(value="cs20") cs20  
+                        option(value="cs19") cs19  
+                        option(value="cs19") cs19  
+                        option(value="cs19") cs19  
+                        option(value="cs19") cs19 
+                    br
+                    | Year of admission
+                    br
+                    select(name="year" id="year" required)
+                        option(value="")   
+                        option(value="2017") Class of 2017  
+                        option(value="2018") Class of 2018  
+                        option(value="2019") Class of 2019  
+                        option(value="2020") Class of 2020  
+                        option(value="2021") Class of 2021 
+                    br
+                    | select start time 
+                    br
+                    select(name="start" id="start" required) 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00
+                    br
+                    | Date
+                    br
+                    input(type="date" name="date" value="" required)
+                    br
+                    input(type="submit" value="submit" name="submit") 

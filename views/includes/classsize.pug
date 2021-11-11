@@ -1,0 +1,24 @@
+.wrap 
+    form(action="/classsizeres" method="post")  
+        p 
+            | PLEASE SELECT THE GROUP YOU WISH TO CHECH SIZE
+            br
+            br
+            | Course 
+            br
+            select(name="group" id="group" )
+                option(value="bcs") Bachelor of computer science  
+                option(value="bit") Bachelor of Information technology  
+ 
+            br
+            | Year of admission
+            br
+            select(name="year" id="year" )
+                option(value="")   
+                option(value="2017") Class of 2017  
+                option(value="2018") Class of 2018  
+                option(value="2019") Class of 2019  
+                option(value="2020") Class of 2020  
+                option(value="2021") Class of 2021 
+            br
+            input(type="submit" value="submit" name="submit")   

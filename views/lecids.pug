@@ -1,0 +1,14 @@
+extends layout 
+
+block content  
+        for item in items 
+            .wrap
+                p
+                    tr.odd(role='row')
+                        | LEC DETAILS
+                        br 
+                        |ID: 
+                        td #{item.id} 
+                        br
+                        |LEC NAME: 
+                        td #{item.fullname}

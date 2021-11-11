@@ -1,0 +1,80 @@
+extends layout 
+
+block content 
+    .wrap   
+        form(action="/itemtoday" method="post")
+                p
+                    |       Please select event
+                    br
+                    | class: 
+                    input(type='radio', name='event', value='class')
+                    |          exam: 
+                    input(type='radio', name='event', value='exam')
+                    |          CAT: 
+                    input(type='radio', name='event', value='CAT')
+                    br
+                    |          UNIT: 
+                    br
+                    input(type='text', value="", name="unit" required)
+                    br 
+                    |          Unitname: 
+                    br
+                    input(type='text', value="" , name="unitname" required)
+                    br 
+                    | Select venue
+                    br
+                    select(name="venue" id="venue" required)
+                        option(value="") 
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                    br
+                    | select group 
+                    br
+                    select(name="group" id="group" required)
+                        option(value="")   
+                        option(value="bcs") Bachelor of Computer science  
+                        option(value="bit") Bachelor of Information technology  
+                    br
+                    | Year of admission
+                    br
+                    select(name="year" id="year" required)
+                        option(value="")   
+                        option(value="2017") Class of 2017  
+                        option(value="2018") Class of 2018  
+                        option(value="2019") Class of 2019  
+                        option(value="2020") Class of 2020  
+                        option(value="2021") Class of 2021   
+                    br
+                    | select start time 
+                    br
+                    select(name="start" id="end" required) 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                    br
+                    | select end time
+                    br
+                    select(name="end" id="end" required) 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                    br 
+                    | please type additional comments
+                    textarea(name="comments", cols="10", rows="1")
+                    br
+                    | Date
+                    br
+                    input(type="date" name="date" value="" required) 
+                    br
+                    input(type="submit" value="submit" name="submit") 

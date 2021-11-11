@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+    .wrap   
+        form(action="/comdepartmentsend" method="post")
+            | Message
+            input(type='text', value="" , name="message" required)
+            br
+            | Select group you wish to send to:
+            br
+            select(name="dept" id="dept" required)
+                option(value="")   
+                option(value="SCI") SCI  
+                option(value="SONAS") SONAS  
+            br
+            input(type="submit" value="Send msg" name="submit")

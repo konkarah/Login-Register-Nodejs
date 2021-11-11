@@ -1,0 +1,23 @@
+extends layout 
+
+block content 
+    .wrap   
+        form(action="/comgroupsend" method="post")
+            | Message
+            input(type='text', value="" , name="message" required)
+            br
+            | Select group you wish to send to:
+            br
+            select(name="group" id="group" required)
+                option(value="")   
+                option(value="bcs") Computer Science class of 2019  
+                option(value="bit") Information Technology class of 2019  
+            br
+            | Year of admission 
+            br
+            select(name="group" id="group" required)
+                option(value="")   
+                option(value="bcs") Computer Science class of 2019  
+                option(value="bit") Information Technology class of 2019  
+            br
+            input(type="submit" value="Send msg" name="submit")

@@ -2,10 +2,13 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const pageRouter = require('./routes/pages');
+const itemRouter = require('./routes/item');
 const app = express();
 
+app.use(express.json());
+
 // for body parser. to collect data that sent from the client.
-app.use(express.urlencoded( { extended : false}));
+app.use(express.urlencoded( { extended : true}));
 
 
 // Serve static files. CSS, Images, JS files ... etc
@@ -27,8 +30,11 @@ app.use(session({
 }));
 
 
+
 // Routers
 app.use('/', pageRouter);
+app.use('/items', itemRouter);
+
 
 
 // Errors => page not found 404
@@ -44,9 +50,15 @@ app.use((err, req, res, next) => {
     res.send(err.message);
 });
 
+
+
 // Setting up the server
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Server is running on port 3000...');
 });
+
+app.get('/stuint',(req,res)=> {
+    res.sendFile(path.join(__dirname, './interfaces/stuinterface.html'));
+})
 
 module.exports = app;

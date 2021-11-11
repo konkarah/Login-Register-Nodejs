@@ -5,18 +5,19 @@ const mysql = require('mysql');
  *  */
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'localhost',
-    user: 'Your database username', // use your mysql username.
-    password: 'Your database password', // user your mysql password.
-    database: 'www'
+    host: '192.168.64.2',
+    user: 'deh', // use your mysql username.
+    password: '1234', // user your mysql password.
+    database: 'mmustsys'
 });
 
 pool.getConnection((err, connection) => {
-    if(err) 
-        console.error("Something went wrong connecting to the database ...");
-    
+    if(err){ 
+        console.error("Something went wrong connecting to the database ...")
+    }
     if(connection)
         connection.release();
+        console.log('Database connected')
     return;
 });
 

@@ -1,0 +1,19 @@
+extends layout 
+
+block content 
+    .wrap   
+        form(action="/comyearsend" method="post")
+            | Message
+            input(type='text', value="" , name="message" required)
+            br
+            | Select YEAR you wish to send to:
+            br
+            select(name="year" id="year" required)
+                option(value="")   
+                option(value="2021") First Year  
+                option(value="2020") Second Year  
+                option(value="2019") Third Year  
+                option(value="2018") Fourth Year  
+                option(value="2017") Fifth Year  
+            br
+            input(type="submit" value="Send msg" name="submit")

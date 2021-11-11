@@ -1,0 +1,60 @@
+.wrap 
+    form(action="/updatelessontime/"+id method="post")  
+        p 
+            input(type='hidden', value=course , name="group" )
+            input(type='hidden', value=year , name="year" )
+            input(type='hidden', value=unitnme , name="unitname" )
+            |       Please select event
+            br
+            | class: 
+            input(type='radio', name='event', value='class' disabled)
+            |          exam: 
+            input(type='radio', name='event', value='exam' disabled)
+            |          CAT: 
+            input(type='radio', name='event', value='CAT' disabled)
+            br
+            |          UNIT: 
+            br
+            input(type='text', value="", name="unit" disabled)
+            br 
+            |          Unitname: 
+            br
+            input(type='text', value="" , name="unitname" disabled)
+            br 
+            | Select venue
+            br
+            select(name="venue" id="venue" disabled)
+                option(value="lbb011") lbb011
+                option(value="lbb011") lbb011
+                option(value="lbb011") lbb011
+            br
+            | select group 
+            br
+            select(name="group" id="group" disabled)
+                option(value="cs19") cs19                               
+            br
+            | Year of admission
+            select(name="year" id="year" disabled)
+                option(value="")   
+                option(value="2017") Class of 2017  
+                option(value="2018") Class of 2018  
+                option(value="2019") Class of 2019  
+                option(value="2020") Class of 2020  
+                option(value="2021") Class of 2021                              
+            br
+            | select start time 
+            br
+            select(name="start" id="end") 
+                option(value="0800") 08:00 
+                option(value="1000") 10:00 
+            br
+            | select end time
+            br
+            select(name="end" id="end")
+                option(value="0900") 09:00 
+                option(value="1200") 12:00 
+            br 
+            | please type additional comments
+            textarea(name="comments", cols="10", rows="1" disabled) 
+            br
+            input(type="submit" value="submit" name="submit") 

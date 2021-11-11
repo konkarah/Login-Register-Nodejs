@@ -1,0 +1,109 @@
+body {
+    background: url('../img/pic2.jpg');
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+    max-width: 350px;
+    border-radius: 20px;
+    margin: auto;
+    background: rgba(0,0,0,0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+h2 {
+   text-align: center; 
+}
+
+input[type=text],input[type=password] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 5px;
+    background: rgba0, 0, 0, 0.10);
+    border: none;
+    outline: none;
+    border-bottom; 1px dotted #fff;
+    border-radius; 5px;
+    color: black;
+    margin: 5px;
+    font-weight: bold;
+}
+
+input[type=email] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 5px;
+    background: rgba0, 0, 0, 0.10);
+    border: none;
+    outline: none;
+    border-bottom; 1px dotted #fff;
+    border-radius; 5px;
+    color: black;
+    margin: 5px;
+    font-weight: bold;
+}
+
+input[type=submit] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background: #60adde;
+    opacity: 0.7;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #ffffff;
+
+}
+
+input[type= submit]:hover {
+    background: #003366;
+    opacity: 0.7;
+}
+
+.greeting
+{
+    color: #222;
+    background-color: rgb(245, 255, 245);
+    border: 1px solid rgb(210, 231, 210);
+    padding: 1em;
+}
+.greeting span
+{
+    color: rgb(112, 172, 16);
+}
+
+nav
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    margin: auto;
+    max-width: 400px;
+}
+nav ul
+{
+    list-style: none;
+}
+
+nav ul li 
+{
+    display: inline;
+}
+nav ul li a 
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #444;
+    padding: 8px 20px;
+}
+nav ul li a:hover
+{
+    background-color: #F0F0F0;
+}

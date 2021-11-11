@@ -1,0 +1,18 @@
+extends layout 
+
+block content 
+    .wrap   
+        form(method="post" action="/comint")
+            table 
+                tr
+                    td Username 
+                    td 
+                        input(type="text" name="username" required)
+                tr 
+                    td Password 
+                    td 
+                        input(type="password" name="password" required)
+                tr 
+                    td
+                    td
+                        input(type="submit" value="Login")

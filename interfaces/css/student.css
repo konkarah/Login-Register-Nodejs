@@ -1,0 +1,60 @@
+body {
+    background: url('../images/pic1.jpg');
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+    max-width: 350px;
+    border-radius: 20px;
+    margin: auto;
+    background: rgba(0,0,0,0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #ffffff;
+    margin-top: 100px;
+}
+.wrap p{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h2 {
+   text-align: center; 
+}
+
+input[type=text], input[type=number], input[type=select], input[type=tel] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 5px;
+    background: rgba0, 0, 0, 0.10);
+    border: none;
+    outline: none;
+    border-bottom; 1px dotted #fff;
+    border-radius; 5px;
+    color: black;
+    margin: 5px;
+    font-weight: bold;
+}
+
+
+input[type=submit] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background: #60adde;
+    opacity: 0.7;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #ffffff;
+
+}
+
+input[type= submit]:hover {
+    background: #003366;
+    opacity: 0.7;
+}

@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+    .wrap   
+        form(action="/comstudent" method="get")
+            input(type="submit" value="Send to individual student(s)" name="submit")
+        form(action="/comgroup" method="get")
+            input(type="submit" value="Send to Class groups" name="submit")
+        form(action="/comdepartment" method="get")
+            input(type="submit" value="Send to School" name="submit")
+        form(action="/comyear" method="get")
+            input(type="submit" value="Send to Year" name="submit")
+        form(action="/comdeptyear" method="get")
+            input(type="submit" value="Send to School & Year" name="submit")
+        form(action="/comallstudents" method="get")
+            input(type="submit" value="Send to entire groups" name="submit")

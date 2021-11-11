@@ -1,0 +1,78 @@
+form(action="/itemadmin" method="post")
+                p
+                    |       Please select event
+                    br
+                    | class: 
+                    input(type='radio', name='event', value='class')
+                    |          exam: 
+                    input(type='radio', name='event', value='exam')
+                    |          CAT: 
+                    input(type='radio', name='event', value='CAT')
+                    br
+                    |          UNIT: 
+                    br
+                    input(type='text', value="", name="unit")
+                    br 
+                    |          Unitname: 
+                    br
+                    input(type='text', value="" , name="unitname")
+                    br 
+                    | Select venue
+                    br
+                    select(name="venue" id="venue")
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                        option(value="lbb011") lbb011
+                    br
+                    | select group 
+                    br
+                    select(name="group" id="group")
+                        option(value="bsc") bachelor of computer science 
+                        option(value="bit") bachelor of Information technology
+                    br
+                    | Year of admission
+                    br
+                    select(name="year" id="year")
+                        option(value="2017") class of 2017 
+                        option(value="2018") class of 2018 
+                        option(value="2019") class of 2019  
+                        option(value="2020") class of 2020  
+                        option(value="2021") class of 2021 
+                    br
+                    | select start time 
+                    br
+                    select(name="start" id="end") 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                        option(value="0800") 08:00 
+                    br
+                    | select end time
+                    br
+                    select(name="end" id="end")
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                        option(value="0900") 09:00 
+                    br 
+                    |          LecId: 
+                    br
+                    input(type='text', value="", name="lecid")
+                    br 
+                    | please type additional comments
+                    textarea(name="comments", cols="10", rows="1") 
+                    br
+                    | Date of event
+                    input(type="date" name="date" value="")
+                    input(type="submit" value="submit" name="submit") 

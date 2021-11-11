@@ -1,0 +1,50 @@
+form(action="/updatelessonvenue/"+id method="post")  
+        p
+            input(type='hidden', value=course , name="group" )
+            input(type='hidden', value=year , name="year" )
+            |       Please select event
+            br
+            | class: 
+            input(type='radio', name='event', value='class' disabled)
+            |          exam: 
+            input(type='radio', name='event', value='exam' disabled)
+            |          CAT: 
+            input(type='radio', name='event', value='CAT' disabled)
+            br
+            |          UNIT: 
+            br
+            input(type='text', value="", name="unit" disabled)
+            br 
+            |          Unitname: 
+            br
+            input(type='text', value="" , name="unitname" disabled)
+            br 
+            | Select venue
+            br
+            select(name="venue" id="venue")
+                option(value="lbb011") lbb011
+                option(value="mph001") mph001
+                option(value="eca004") eca004
+                
+            br
+            | select group 
+            br
+            select(name="group" id="group" disabled)
+                option(value="cs19") cs19                               
+            br
+            | select start time 
+            br
+            select(name="start" id="end" disabled) 
+                option(value="0800") 08:00 
+                option(value="1000") 10:00 
+            br
+            | select end time
+            br
+            select(name="end" id="end" disabled)
+                option(value="0900") 09:00 
+                option(value="1200") 12:00 
+            br 
+            | please type additional comments
+            textarea(name="comments", cols="10", rows="1" disabled) 
+            br
+            input(type="submit" value="submit" name="submit") 

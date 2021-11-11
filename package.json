@@ -4,11 +4,7 @@
   "description": "Simple Login/Register app in nodejs with mysql",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SofianChouaib/Login-Register-Nodejs.git"
+    "test": "nodemon app.js"
   },
   "keywords": [
     "nodejs",
@@ -19,14 +15,13 @@
   ],
   "author": "Sofiane Chouaib",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SofianChouaib/Login-Register-Nodejs/issues"
-  },
-  "homepage": "https://github.com/SofianChouaib/Login-Register-Nodejs#readme",
   "dependencies": {
+    "@vonage/server-sdk": "^2.10.10",
     "bcrypt": "^5.0.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "https": "^1.0.0",
     "mysql": "^2.18.1",
     "pug": "^3.0.0",
     "util.promisify": "^1.0.1"

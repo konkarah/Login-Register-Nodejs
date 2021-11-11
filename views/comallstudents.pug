@@ -1,0 +1,9 @@
+extends layout 
+
+block content 
+    .wrap   
+        form(action="/comallstudentssend" method="post")
+            | Message
+            input(type='text', value="" , name="message" required)
+            br
+            input(type="submit" value="Send msg" name="submit")

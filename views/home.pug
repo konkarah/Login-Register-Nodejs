@@ -7,7 +7,7 @@ mixin message(opp, name)
     else 
         h1.greeting Welcome 
             span=name 
-            |  to our website
+            |  to the Automated MMUST Communication System
 
 
 append links 
@@ -18,3 +18,69 @@ block content
     .dashboard 
         .user 
             +message(opp, name)
+
+    form(action="/scheduletoday" method="get")
+        input(type="submit" value="Schedule Class Today" name="submit")
+    form(action="/schedule" method="get")
+        input(type="submit" value="Schedule Class" name="submit")
+
+    form(action="/ca" method="get")
+        input(type="submit" value="class availability" name="submit")
+
+    form(action="/va" method="get")
+        input(type="submit" value="venue availability" name="submit")
+
+
+    
+    for item in items
+        .wrap
+            p
+                tr.odd(role='row')
+                        | EVENT
+                        br 
+                        td #{item.tevent} 
+                        br
+                        | group:
+                        td #{item.cgroup} 
+                        br
+                        | unit:
+                        td #{item.unit}
+                        br
+                        | Unitname:
+                        td #{item.unitname}
+                        br
+                        | Start Time:
+                        td #{item.lstart}
+                        br
+                        |End Time:
+                        td #{item.lend}
+                        br
+                        | Venue:
+                        td #{item.venue}
+                        br
+                        form(action="/updatetime" method="post")
+                            input(type='hidden', value=item.id , name="itemid" )
+                            input(type='hidden', value=item.cgroup , name="group" )
+                            input(type='hidden', value=item.unitname , name="unitname" )
+                            input(type='hidden', value=item.cyear , name="year" )
+                            input(type="submit" value="Change Time" name="submit")
+                        form(action="/updatevenue" method="post")
+                            input(type='hidden', value=item.id , name="itemid" )
+                            input(type='hidden', value=item.cgroup , name="vgroup" )
+                            input(type='hidden', value=item.cyear , name="year" )
+                            input(type='hidden', value=item.unitname , name="unitname" )
+                            input(type="submit" value="Change Venue" name="submit")
+                        form(action="/delete" method="post")
+                            input(type='hidden', value=item.id , name="itemid" )
+                            input(type='hidden', value=item.unitname , name="unitname" )
+                            input(type='hidden', value=item.cgroup , name="group" )
+                            input(type='hidden', value=item.cyear , name="year" )
+                            input(type="submit" value="Cancel class" name="submit")
+
+
+    form(action="/lecid" method="get")
+        input(type="submit" value="YOUR ID" name="submit")
+    form(action="/venuesize" method="get")
+        input(type="submit" value="Venue Size" name="submit")
+    form(action="/classsize" method="get")
+        input(type="submit" value="Class Size" name="submit")

@@ -1,0 +1,14 @@
+extends layout 
+
+block content  
+        for item in items 
+            .wrap
+                p
+                    tr.odd(role='row')
+                        | EVENT
+                        br 
+                        td #{item.issue} 
+                        br
+                        form(action="/issuesolved" method="post")
+                            input(type='hidden', value=item.id , name="itemid" )
+                            input(type="submit" value="Issue solved" name="submit")

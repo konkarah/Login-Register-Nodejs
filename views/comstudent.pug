@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    .wrap   
+        form(action="/comstudentsend" method="post")
+            | Message
+            input(type='text', value="" , name="message" required)
+            br
+            | Reg Number(separated by comma)
+            input(type='text', value="" , name="regno" required)
+            br
+            input(type="submit" value="Send msg" name="submit")

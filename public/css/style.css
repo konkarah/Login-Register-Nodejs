@@ -3,6 +3,9 @@
 body 
 {
     background-color: #F0F0F0;
+    background-image: url('../img/pic2.jpg');
+    background-size: cover;
+    background-position: center;
 }
 .table, .table td, .table tr
 {
@@ -19,6 +22,8 @@ nav
     background-color: #fff;
     border: 1px solid #ccc;
     margin-bottom: 5px;
+    margin: auto;
+    max-width: 400px;
 }
 nav ul
 {
@@ -42,25 +47,20 @@ nav ul li a:hover
 }
 .page-wrapper
 {
-    width: 960px;
+    width: 480px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .login-panel, .register-panel
 {
-    padding: 20px 20px 50px 20px;
     border: 1px solid #ccc;
     background-color: #fff;
+    max-width: 360px;
+    box-sizing: border-box;
+    margin: auto;
 }
-.login-panel
-{
-    float: left;
-}
-.register-panel
-{
-    float: right;
-}
+
 .image, .join-us-img
 {
     display: block;
@@ -74,25 +74,28 @@ nav ul li a:hover
 {    
     width: 90%;   
 }
-input[type="text"], input[type="password"]
+input[type="text"], input[type="password"], input[type="date"]
 {
     padding: 8px 5px;
     margin: 0 0 5px 5px;
-    min-width: 270px;
+    min-width: 180px;
     font-size: 1.05em;
     background-color: #F5F5F5;
     border: 1px solid #ccc;
 }
 input[type="submit"]
 {
-    float: right;
-    padding: 7px 20px;
-    font-size: 1.06em;
-    background-color: #0796cf;
-    color: #fff;
-    border: 1px solid #0285b9;
-    cursor: pointer;
-    margin-top: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background: #60adde;
+    opacity: 0.7;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #ffffff;
 }
 input[type="text"]:focus , input[type="password"]:focus {
     background-color:#fff;
@@ -123,7 +126,7 @@ input[type="submit"]:hover
 }
 form
 {
-    overflow: hidden;
+    
     margin-bottom: 10px;
 }
 textarea
@@ -158,4 +161,14 @@ p
 .greeting span
 {
     color: rgb(112, 172, 16);
+}
+.wrap {
+    max-width: 350px;
+    border-radius: 20px;
+    margin: auto;
+    background: rgba(0,0,0,0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #ffffff;
+    margin-top: 100px;
 }
